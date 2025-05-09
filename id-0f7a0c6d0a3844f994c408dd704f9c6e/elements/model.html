@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>HORA 3.0 - Research</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.4.1.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>HORA 3.0 - Research</b>
+
+            <!-- If a View with Viewpoint -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+                    <!-- Analysis -->
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="analysis">
+						<table class="table table-striped table-hover table-condensed" id="used-in-views">
+							<thead>
+								<tr><th colspan="2" class="i18n-used-in-views" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-viewpoint"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table class="table table-striped table-hover table-condensed" id="model-relations">
+							<thead>
+								<tr><th colspan="4" class="i18n-model-relations" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-type"></th>
+									<th class="i18n-source"></th>
+									<th class="i18n-target"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"id-0f7a0c6d0a3844f994c408dd704f9c6e", type:"ArchimateModel", name:decodeURL("HORA+3.0+-+Research"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"id-0f7a0c6d0a3844f994c408dd704f9c6e", contentid:"id-c34615e72d1646d887b6a1a1a10e3cd7", contenttype:"Folder"});
+								dataFolders.push({id:"id-c34615e72d1646d887b6a1a1a10e3cd7", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-0f7a0c6d0a3844f994c408dd704f9c6e", contentid:"id-61d9801fca604eca85e395dfd96f21c0", contenttype:"Folder"});
+								dataFolders.push({id:"id-61d9801fca604eca85e395dfd96f21c0", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-61d9801fca604eca85e395dfd96f21c0", contentid:"id-d0344020b3ee4f29a461ae7c8054c21a", contenttype:"Folder"});
+									dataFolders.push({id:"id-d0344020b3ee4f29a461ae7c8054c21a", type:"Folder", name:decodeURL("English"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-d0344020b3ee4f29a461ae7c8054c21a", contentid:"id-9a1c3d5a189344ffbf19ba362640ab32", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-9a1c3d5a189344ffbf19ba362640ab32", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Employee"), documentation:decodeURL("")});
+														dataProperties.push({conceptid:"id-9a1c3d5a189344ffbf19ba362640ab32", propkey:decodeURL("CERIF"), propvalue:decodeURL("cfProj_Pers")});
+
+										dataFoldersContent.push({folderid:"id-d0344020b3ee4f29a461ae7c8054c21a", contentid:"id-a49809d5c306405d9269edcec4e97199", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-a49809d5c306405d9269edcec4e97199", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Funding+organization"), documentation:decodeURL("A+funding+organization+is+an+institutional+entity+%28public%2C+private%2C+or+philanthropic%29+that+allocates+financial+resources+to+support+one+or+more+research+projects.+It+plays+a+critical+role+in+shaping+research+agendas%2C+ensuring+accountability+for+public+or+private+investments%2C+and+enabling+the+translation+of+ideas+into+validated+knowledge+and+innovation.")});
+										dataFoldersContent.push({folderid:"id-d0344020b3ee4f29a461ae7c8054c21a", contentid:"id-6d374f22fee14fa6a1ba16ad5333d680", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-6d374f22fee14fa6a1ba16ad5333d680", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Funding+program"), documentation:decodeURL("In+the+context+of+Dutch+higher-education+research+%28and+aligned+with+pan-European+CERIF+standards%29%2C+a+funding+program+is+a+first-class+entity+that+captures+the+structured+scheme+through+which+a+funder+issues+calls%2C+evaluates+proposals%2C+and+disburses+resources.+It+sits+between+the+high-level+funding+organization+and+the+individual+research+project+records+it+supports.")});
+										dataFoldersContent.push({folderid:"id-d0344020b3ee4f29a461ae7c8054c21a", contentid:"id-cc14d3f5d28241c790613d327ef739f2", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-cc14d3f5d28241c790613d327ef739f2", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Partnership"), documentation:decodeURL("A+partnership+is+a+formal%2C+collaborative+arrangement+between+the+higher+education+institution+and+one+or+more+%28Research%29Organizations+%28and%2C+potentially%2C+other+stakeholder+entities%29+that+pools+resources%2C+expertise+and+responsibilities+to+pursue+common+research+objectives.+It+creates+a+governance+and+legal+framework+under+which+joint+activities%E2%80%94such+as+multi-institutional+projects%2C+networks%2C+or+consortia%E2%80%94are+planned%2C+executed%2C+and+evaluated.")});
+										dataFoldersContent.push({folderid:"id-d0344020b3ee4f29a461ae7c8054c21a", contentid:"id-aed4de7eb00949acbfbe1f6af799e52d", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-aed4de7eb00949acbfbe1f6af799e52d", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Research+organization"), documentation:decodeURL("A+research+organization+is+an+institutional+entity%E2%80%94either+a+higher-education+institution%2C+a+public+research+institute%2C+or+a+dedicated+research+center%E2%80%94whose+primary+mission+includes+conducting%2C+coordinating%2C+or+supporting+research+activities.+It+provides+the+structural%2C+human%2C+and+infrastructural+resources+necessary+for+research+projects+and+serves+as+the+administrative+and+legal+home+for+researchers+and+their+outputs.")});
+										dataFoldersContent.push({folderid:"id-d0344020b3ee4f29a461ae7c8054c21a", contentid:"id-846b68aee7fa42388da3374939651a28", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-846b68aee7fa42388da3374939651a28", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Research+project"), documentation:decodeURL("A+research+project+is+a+time-bounded%2C+goal-oriented+organizational+endeavor+undertaken+within+%28or+in+partnership+with%29+one+or+more+higher-education+institutions%2C+in+order+to+generate%2C+validate+or+disseminate+new+knowledge.")});
+														dataProperties.push({conceptid:"id-846b68aee7fa42388da3374939651a28", propkey:decodeURL("CERIF"), propvalue:decodeURL("cfProj_Org")});
+
+										dataFoldersContent.push({folderid:"id-d0344020b3ee4f29a461ae7c8054c21a", contentid:"id-c97610b03cb84d0b9f1636391ff407ab", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-c97610b03cb84d0b9f1636391ff407ab", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Output"), documentation:decodeURL("An+output+is+any+tangible+or+digital+deliverable+produced+through+one+or+more+research+projects+or+activities%2C+which+may+be+consumed%2C+cited%2C+reused+or+built+upon+by+others.+Outputs+encompass+scholarly+publications%2C+research+data%2C+software%2C+patents%2C+theses%2C+reports%2C+and+other+knowledge+artifacts.+They+form+the+primary+evidence+of+research+performance%2C+impact%2C+and+transparency.")});
+														dataProperties.push({conceptid:"id-c97610b03cb84d0b9f1636391ff407ab", propkey:decodeURL("CERIF"), propvalue:decodeURL("cfProj_Out")});
+
+
+									dataFoldersContent.push({folderid:"id-61d9801fca604eca85e395dfd96f21c0", contentid:"id-7a248d3916d64221ad89ed383222a34a", contenttype:"Folder"});
+									dataFolders.push({id:"id-7a248d3916d64221ad89ed383222a34a", type:"Folder", name:decodeURL("Nederlands"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-7a248d3916d64221ad89ed383222a34a", contentid:"id-513dcbbab17d4a8ca6a867b8825b0095", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-513dcbbab17d4a8ca6a867b8825b0095", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Financierings-programma"), documentation:decodeURL("In+de+context+van+Nederlands+hogeronderwijsonderzoek+%28en+afgestemd+op+de+pan-Europese+CERIF-normen%29+is+een+financieringsprogramma+een+eersteklas+entiteit+die+de+gestructureerde+regeling+vastlegt+waarmee+een+financier+oproepen+uitschrijft%2C+voorstellen+evalueert+en+middelen+uitbetaalt.+Het+bevindt+zich+tussen+de+financieringsverstrekker+op+hoog+niveau+en+de+individuele+onderzoeksprojecten+die+het+ondersteunt.")});
+										dataFoldersContent.push({folderid:"id-7a248d3916d64221ad89ed383222a34a", contentid:"id-7e37bc8174864a25b5ed38132827dd47", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-7e37bc8174864a25b5ed38132827dd47", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Financierings-verstrekker"), documentation:decodeURL("Een+financieringsverstrekker+is+een+institutionele+entiteit+%28publiek%2C+privaat+of+filantropisch%29+die+financi%C3%ABle+middelen+toekent+ter+ondersteuning+van+een+of+meer+onderzoeksprojecten.+Ze+speelt+een+cruciale+rol+bij+het+vormgeven+van+onderzoeksagenda%27s%2C+het+waarborgen+van+de+verantwoording+van+publieke+of+private+investeringen+en+het+mogelijk+maken+van+de+vertaling+van+idee%C3%ABn+naar+gevalideerde+kennis+en+innovatie.")});
+										dataFoldersContent.push({folderid:"id-7a248d3916d64221ad89ed383222a34a", contentid:"id-9360e14e87a44fd8b47836ad347276d1", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-9360e14e87a44fd8b47836ad347276d1", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Medewerker"), documentation:decodeURL("")});
+														dataProperties.push({conceptid:"id-9360e14e87a44fd8b47836ad347276d1", propkey:decodeURL("CERIF"), propvalue:decodeURL("cfProj_Pers")});
+
+										dataFoldersContent.push({folderid:"id-7a248d3916d64221ad89ed383222a34a", contentid:"id-3d2bda6844e145c08e91e9ba7857765f", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-3d2bda6844e145c08e91e9ba7857765f", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Onderzoeksorganisatie"), documentation:decodeURL("Een+onderzoeksorganisatie+is+een+institutionele+entiteit+%E2%80%93+hetzij+een+instelling+voor+hoger+onderwijs%2C+een+openbaar+onderzoeksinstituut+of+een+gespecialiseerd+onderzoekscentrum+%E2%80%93+waarvan+de+primaire+missie+het+uitvoeren%2C+co%C3%B6rdineren+of+ondersteunen+van+onderzoeksactiviteiten+omvat.+Zij+levert+de+structurele%2C+personele+en+infrastructurele+middelen+die+nodig+zijn+voor+onderzoeksprojecten+en+fungeert+als+de+administratieve+en+juridische+thuisbasis+voor+onderzoekers+en+hun+resultaten.")});
+										dataFoldersContent.push({folderid:"id-7a248d3916d64221ad89ed383222a34a", contentid:"id-858627e9e78b40caba4028b6c8f61c4c", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-858627e9e78b40caba4028b6c8f61c4c", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Onderzoeksproject"), documentation:decodeURL("Een+onderzoeksproject+is+een+tijdgebonden%2C+doelgerichte+organisatorische+onderneming+die+wordt+uitgevoerd+binnen+%28of+in+samenwerking+met%29+een+of+meer+instellingen+voor+hoger+onderwijs%2C+met+als+doel+nieuwe+kennis+te+genereren%2C+te+valideren+of+te+verspreiden.")});
+														dataProperties.push({conceptid:"id-858627e9e78b40caba4028b6c8f61c4c", propkey:decodeURL("CERIF"), propvalue:decodeURL("cfProj_Org")});
+
+										dataFoldersContent.push({folderid:"id-7a248d3916d64221ad89ed383222a34a", contentid:"id-414fefed8695453e9b86f240705158dd", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-414fefed8695453e9b86f240705158dd", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Partnerschap"), documentation:decodeURL("Een+partnerschap+is+een+formele+samenwerkingsovereenkomst+tussen+de+hogeronderwijsinstelling+en+een+of+meer+%28onderzoeks%29organisaties+%28en+mogelijk+andere+belanghebbenden%29+die+middelen%2C+expertise+en+verantwoordelijkheden+bundelt+om+gemeenschappelijke+onderzoeksdoelstellingen+na+te+streven.+Het+cre%C3%ABert+een+bestuurlijk+en+juridisch+kader+waarbinnen+gezamenlijke+activiteiten+%E2%80%93+zoals+multi-institutionele+projecten%2C+netwerken+of+consortia+%E2%80%93+worden+gepland%2C+uitgevoerd+en+ge%C3%ABvalueerd.")});
+										dataFoldersContent.push({folderid:"id-7a248d3916d64221ad89ed383222a34a", contentid:"id-637bbc78cf4b40fe98bfbfd8891feed5", contenttype:"BusinessObject"});
+											dataElements.push({id:"id-637bbc78cf4b40fe98bfbfd8891feed5", type:"BusinessObject", specialization:decodeURL(""), name:decodeURL("Output"), documentation:decodeURL("Een+output+is+elk+tastbaar+of+digitaal+product+dat+voortkomt+uit+een+of+meer+onderzoeksprojecten+of+-activiteiten+en+dat+door+anderen+kan+worden+gebruikt%2C+geciteerd%2C+hergebruikt+of+verder+ontwikkeld.+Output+omvat+wetenschappelijke+publicaties%2C+onderzoeksgegevens%2C+software%2C+patenten%2C+scripties%2C+rapporten+en+andere+kennisartefacten.+Ze+vormen+het+primaire+bewijs+van+onderzoeksprestaties%2C+impact+en+transparantie.")});
+														dataProperties.push({conceptid:"id-637bbc78cf4b40fe98bfbfd8891feed5", propkey:decodeURL("CERIF"), propvalue:decodeURL("cfProj_Out")});
+
+
+
+
+								dataFoldersContent.push({folderid:"id-0f7a0c6d0a3844f994c408dd704f9c6e", contentid:"id-89c227bba4e64ca18fb2840a8c86ccd1", contenttype:"Folder"});
+								dataFolders.push({id:"id-89c227bba4e64ca18fb2840a8c86ccd1", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-0f7a0c6d0a3844f994c408dd704f9c6e", contentid:"id-48ccae6e8bef42a08d1f194623a48bc8", contenttype:"Folder"});
+								dataFolders.push({id:"id-48ccae6e8bef42a08d1f194623a48bc8", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-0f7a0c6d0a3844f994c408dd704f9c6e", contentid:"id-c9e69d1cf55a4759bdb29819380e27bd", contenttype:"Folder"});
+								dataFolders.push({id:"id-c9e69d1cf55a4759bdb29819380e27bd", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-0f7a0c6d0a3844f994c408dd704f9c6e", contentid:"id-cd83e3e0f3db420b9eb88b52202f0112", contenttype:"Folder"});
+								dataFolders.push({id:"id-cd83e3e0f3db420b9eb88b52202f0112", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-0f7a0c6d0a3844f994c408dd704f9c6e", contentid:"id-013dab55d6184e3abdbc75f62fedc2e6", contenttype:"Folder"});
+								dataFolders.push({id:"id-013dab55d6184e3abdbc75f62fedc2e6", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"id-0f7a0c6d0a3844f994c408dd704f9c6e", contentid:"id-3470b87961d44183bce6bcf5248ac7b5", contenttype:"Folder"});
+								dataFolders.push({id:"id-3470b87961d44183bce6bcf5248ac7b5", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-3470b87961d44183bce6bcf5248ac7b5", contentid:"id-d171b7a3099442b0ba421eed1804a383", contenttype:"Folder"});
+									dataFolders.push({id:"id-d171b7a3099442b0ba421eed1804a383", type:"Folder", name:decodeURL("English"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-ab0b5ff8ef504438ba2d55c2eea04ea6", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-ab0b5ff8ef504438ba2d55c2eea04ea6", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("comprises+%5B1..n%5D"), documentation:decodeURL(""), sourceid:"id-a49809d5c306405d9269edcec4e97199", targetid:"id-6d374f22fee14fa6a1ba16ad5333d680"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-322460bddf714d4eb320a740060b13c6", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-322460bddf714d4eb320a740060b13c6", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("contributes+to+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-9a1c3d5a189344ffbf19ba362640ab32", targetid:"id-c97610b03cb84d0b9f1636391ff407ab"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-796c9d40cf384c42bc431eed8cb8f763", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-796c9d40cf384c42bc431eed8cb8f763", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("employs+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-aed4de7eb00949acbfbe1f6af799e52d", targetid:"id-9a1c3d5a189344ffbf19ba362640ab32"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-09e4d19082934e97accbdfa30127d6e3", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-09e4d19082934e97accbdfa30127d6e3", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("hosts+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-aed4de7eb00949acbfbe1f6af799e52d", targetid:"id-846b68aee7fa42388da3374939651a28"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-a3c0cd8b07c44c96a797ee03594f513d", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-a3c0cd8b07c44c96a797ee03594f513d", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("involves+%5B1..n%5D"), documentation:decodeURL(""), sourceid:"id-846b68aee7fa42388da3374939651a28", targetid:"id-9a1c3d5a189344ffbf19ba362640ab32"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-31d9dd5ebe9e4b8a844b5bfffe6b9ff0", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-31d9dd5ebe9e4b8a844b5bfffe6b9ff0", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("involves+%5B1..n%5D"), documentation:decodeURL(""), sourceid:"id-cc14d3f5d28241c790613d327ef739f2", targetid:"id-aed4de7eb00949acbfbe1f6af799e52d"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-a35ebabe649641bc92db67f6786d1afb", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-a35ebabe649641bc92db67f6786d1afb", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("is+affiliated+with+%5B1..n%5D"), documentation:decodeURL(""), sourceid:"id-9a1c3d5a189344ffbf19ba362640ab32", targetid:"id-aed4de7eb00949acbfbe1f6af799e52d"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-60189e52c3a54580b53968ef8ff64c38", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-60189e52c3a54580b53968ef8ff64c38", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("is+involved+in+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-aed4de7eb00949acbfbe1f6af799e52d", targetid:"id-cc14d3f5d28241c790613d327ef739f2"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-0bb8955e29bf4aa89855f36897224a51", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-0bb8955e29bf4aa89855f36897224a51", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("participates+in+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-9a1c3d5a189344ffbf19ba362640ab32", targetid:"id-846b68aee7fa42388da3374939651a28"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-8f3ed95378ee48bc9ea18e8463c371d3", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-8f3ed95378ee48bc9ea18e8463c371d3", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("produces+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-846b68aee7fa42388da3374939651a28", targetid:"id-c97610b03cb84d0b9f1636391ff407ab"});
+										dataFoldersContent.push({folderid:"id-d171b7a3099442b0ba421eed1804a383", contentid:"id-f6ff6b685e164a12ab01acfedd6112b1", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-f6ff6b685e164a12ab01acfedd6112b1", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("funds+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-6d374f22fee14fa6a1ba16ad5333d680", targetid:"id-846b68aee7fa42388da3374939651a28"});
+
+									dataFoldersContent.push({folderid:"id-3470b87961d44183bce6bcf5248ac7b5", contentid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contenttype:"Folder"});
+									dataFolders.push({id:"id-eb43682ba2584c90b9e7cf04ac270ceb", type:"Folder", name:decodeURL("Nederlands"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-32fd625e8c454c84b5153493ed152380", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-32fd625e8c454c84b5153493ed152380", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("bestaat+uit+%5B1..n%5D"), documentation:decodeURL(""), sourceid:"id-414fefed8695453e9b86f240705158dd", targetid:"id-3d2bda6844e145c08e91e9ba7857765f"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-5ba5b067b0c149c68e03197aedfffcd4", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-5ba5b067b0c149c68e03197aedfffcd4", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("betrekt+%5B1..n%5D"), documentation:decodeURL(""), sourceid:"id-858627e9e78b40caba4028b6c8f61c4c", targetid:"id-9360e14e87a44fd8b47836ad347276d1"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-dd6f56340add4d09aba6ead322cf3fba", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-dd6f56340add4d09aba6ead322cf3fba", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("draagt+bij+aan+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-9360e14e87a44fd8b47836ad347276d1", targetid:"id-637bbc78cf4b40fe98bfbfd8891feed5"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-31d4b555539147a5a820c1db3ea755b5", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-31d4b555539147a5a820c1db3ea755b5", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("heeft+in+dienst+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-3d2bda6844e145c08e91e9ba7857765f", targetid:"id-9360e14e87a44fd8b47836ad347276d1"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-dda3bae645a74ad4b68764260bd762bf", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-dda3bae645a74ad4b68764260bd762bf", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("is+aangesteld+bij+%5B1..n%5D"), documentation:decodeURL(""), sourceid:"id-9360e14e87a44fd8b47836ad347276d1", targetid:"id-3d2bda6844e145c08e91e9ba7857765f"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-4f45eb958ce34d77ad6ceb282f4440d7", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-4f45eb958ce34d77ad6ceb282f4440d7", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("is+betrokken+bij+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-3d2bda6844e145c08e91e9ba7857765f", targetid:"id-414fefed8695453e9b86f240705158dd"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-4106a955fbb1460ab0151b32f33068cf", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-4106a955fbb1460ab0151b32f33068cf", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("organiseert+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-3d2bda6844e145c08e91e9ba7857765f", targetid:"id-858627e9e78b40caba4028b6c8f61c4c"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-0d7c81921f3d44f7b3048a556725e4ef", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-0d7c81921f3d44f7b3048a556725e4ef", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("produceert+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-858627e9e78b40caba4028b6c8f61c4c", targetid:"id-637bbc78cf4b40fe98bfbfd8891feed5"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-ac74575056424184ac0d3f6ec4ea4461", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-ac74575056424184ac0d3f6ec4ea4461", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("werkt+mee+aan+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-9360e14e87a44fd8b47836ad347276d1", targetid:"id-858627e9e78b40caba4028b6c8f61c4c"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-99517403f43a4cbf9ae9708673f0b8da", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-99517403f43a4cbf9ae9708673f0b8da", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("financiert+%5B0..n%5D"), documentation:decodeURL(""), sourceid:"id-513dcbbab17d4a8ca6a867b8825b0095", targetid:"id-858627e9e78b40caba4028b6c8f61c4c"});
+										dataFoldersContent.push({folderid:"id-eb43682ba2584c90b9e7cf04ac270ceb", contentid:"id-7e8f639451574ff3ac545ff90cacced0", contenttype:"AssociationRelationship"});
+											dataRelationships.push({id:"id-7e8f639451574ff3ac545ff90cacced0", type:"AssociationRelationship", specialization:decodeURL(""), name:decodeURL("beheert+%5B1..n%5D"), documentation:decodeURL(""), sourceid:"id-7e37bc8174864a25b5ed38132827dd47", targetid:"id-513dcbbab17d4a8ca6a867b8825b0095"});
+
+
+
+								dataFoldersContent.push({folderid:"id-0f7a0c6d0a3844f994c408dd704f9c6e", contentid:"id-2376e5cab8a14eb3bac24b4315b114d5", contenttype:"Folder"});
+								dataFolders.push({id:"id-2376e5cab8a14eb3bac24b4315b114d5", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"id-2376e5cab8a14eb3bac24b4315b114d5", contentid:"id-a4d86d7bdcbc4016bbd02d10b09bbbf0", contenttype:"Folder"});
+									dataFolders.push({id:"id-a4d86d7bdcbc4016bbd02d10b09bbbf0", type:"Folder", name:decodeURL("English"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-a4d86d7bdcbc4016bbd02d10b09bbbf0", contentid:"id-778ed7a66cbd4eef809347f732c9af8b", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-778ed7a66cbd4eef809347f732c9af8b", type:"ArchimateDiagramModel", name:decodeURL("Conceptual+data+model"), documentation:decodeURL("")});
+													dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-846b68aee7fa42388da3374939651a28", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-9a1c3d5a189344ffbf19ba362640ab32", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-aed4de7eb00949acbfbe1f6af799e52d", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-a49809d5c306405d9269edcec4e97199", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-c97610b03cb84d0b9f1636391ff407ab", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-6d374f22fee14fa6a1ba16ad5333d680", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-cc14d3f5d28241c790613d327ef739f2", contenttype:"BusinessObject"});
+
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-8f3ed95378ee48bc9ea18e8463c371d3", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-a3c0cd8b07c44c96a797ee03594f513d", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-0bb8955e29bf4aa89855f36897224a51", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-322460bddf714d4eb320a740060b13c6", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-a35ebabe649641bc92db67f6786d1afb", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-796c9d40cf384c42bc431eed8cb8f763", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-09e4d19082934e97accbdfa30127d6e3", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-60189e52c3a54580b53968ef8ff64c38", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-ab0b5ff8ef504438ba2d55c2eea04ea6", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-f6ff6b685e164a12ab01acfedd6112b1", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-778ed7a66cbd4eef809347f732c9af8b", contentid:"id-31d9dd5ebe9e4b8a844b5bfffe6b9ff0", contenttype:"AssociationRelationship"});
+
+
+
+									dataFoldersContent.push({folderid:"id-2376e5cab8a14eb3bac24b4315b114d5", contentid:"id-d315a38bb9ca45758d528d780f389e32", contenttype:"Folder"});
+									dataFolders.push({id:"id-d315a38bb9ca45758d528d780f389e32", type:"Folder", name:decodeURL("Nederlands"), documentation:decodeURL("")});
+										dataFoldersContent.push({folderid:"id-d315a38bb9ca45758d528d780f389e32", contentid:"id-8113aca5ffd64137be11118bab34ff72", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"id-8113aca5ffd64137be11118bab34ff72", type:"ArchimateDiagramModel", name:decodeURL("Conceptueel+gegevensmodel"), documentation:decodeURL("")});
+													dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-858627e9e78b40caba4028b6c8f61c4c", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-9360e14e87a44fd8b47836ad347276d1", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-3d2bda6844e145c08e91e9ba7857765f", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-7e37bc8174864a25b5ed38132827dd47", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-637bbc78cf4b40fe98bfbfd8891feed5", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-513dcbbab17d4a8ca6a867b8825b0095", contenttype:"BusinessObject"});
+													dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-414fefed8695453e9b86f240705158dd", contenttype:"BusinessObject"});
+
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-5ba5b067b0c149c68e03197aedfffcd4", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-0d7c81921f3d44f7b3048a556725e4ef", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-ac74575056424184ac0d3f6ec4ea4461", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-dda3bae645a74ad4b68764260bd762bf", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-dd6f56340add4d09aba6ead322cf3fba", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-31d4b555539147a5a820c1db3ea755b5", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-4f45eb958ce34d77ad6ceb282f4440d7", contenttype:"AssociationRelationship"});
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-4106a955fbb1460ab0151b32f33068cf", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-7e8f639451574ff3ac545ff90cacced0", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-99517403f43a4cbf9ae9708673f0b8da", contenttype:"AssociationRelationship"});
+
+																			dataViewsContent.push({viewid:"id-8113aca5ffd64137be11118bab34ff72", contentid:"id-32fd625e8c454c84b5153493ed152380", contenttype:"AssociationRelationship"});
+
+
+
+
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
